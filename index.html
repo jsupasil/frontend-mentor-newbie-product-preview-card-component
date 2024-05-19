@@ -33,17 +33,19 @@
     <script>
       tailwind.config = {
         theme: {
-          colors: {
-            darkCyan: "hsl(158, 36%, 37%)",
-            cream: "hsl(30, 38%, 92%)",
-            veryDarkBlue: "hsl(212, 21%, 14%)",
-            darkGrayishBlue: "hsl(228, 12%, 48%)",
-            white: "hsl(0, 0%, 100%)",
-            veryDarkCyan: "hsl(158, 43%, 18%)",
-          },
-          fontFamily: {
-            Montserrat: ["Montserrat"],
-            Fraunces: ["Fraunces"],
+          extend: {
+            colors: {
+              darkCyan: "hsl(158, 36%, 37%)",
+              cream: "hsl(30, 38%, 92%)",
+              veryDarkBlue: "hsl(212, 21%, 14%)",
+              darkGrayishBlue: "hsl(228, 12%, 48%)",
+              white: "hsl(0, 0%, 100%)",
+              veryDarkCyan: "hsl(158, 43%, 18%)",
+            },
+            fontFamily: {
+              Montserrat: ["Montserrat"],
+              Fraunces: ["Fraunces"],
+            },
           },
         },
       };
@@ -64,16 +66,25 @@
       <div
         class="card box-border w-[343px] h-[611px] sm:w-[600px] sm:h-[450px] flex flex-col sm:flex-row rounded-[10px] bg-white"
       >
-        <img
-          src="./images/image-product-desktop.jpg"
-          class="image-product-desktop hidden sm:block w-[300px] h-full rounded-l-[10px]"
-        />
-
-        <img
-          src="./images/image-product-mobile.jpg"
-          class="image-product-mobile block sm:hidden w-full h-[240px] rounded-t-[10px]"
-        />
-        <div class="context p-[24px] sm:p-[32px]">
+        <div
+          class="image-container w-full h-[240px] sm:w-[300px] sm:h-full max-sm:rounded-t-[10px] sm:rounded-l-[10px] relative"
+        >
+          <img
+            src="./images/image-product-desktop.jpg"
+            class="image-product-desktop hidden sm:block w-full h-[450px] rounded-l-[10px]"
+          />
+          <div
+            class="image-desktop-shadow absolute w-full h-[450px] bg-black opacity-20 hidden sm:block top-0 rounded-l-[10px]"
+          ></div>
+          <img
+            src="./images/image-product-mobile.jpg"
+            class="image-product-mobile block sm:hidden w-full h-full rounded-t-[10px]"
+          />
+          <div
+            class="image-mobile-shadow absolute w-full h-full bg-black opacity-20 block sm:hidden top-0 rounded-t-[10px]"
+          ></div>
+        </div>
+        <div class="context p-[24px] sm:p-[32px] sm:w-[300px] box-border">
           <h4
             class="category font-Montserrat font-medium text-[12px] text-darkGrayishBlue leading-[14.63px] tracking-[5px] mb-[12px] sm:mb-[19px]"
           >
@@ -105,7 +116,7 @@
             </h3>
           </div>
           <button
-            class="button w-full h-[48px] flex justify-center items-center gap-[10.61px] bg-darkCyan rounded-[8px] active:bg-darkCyan"
+            class="button w-full h-[48px] flex justify-center items-center gap-[10.61px] bg-darkCyan rounded-[8px] active:bg-veryDarkCyan"
           >
             <img
               src="./images/icon-cart.svg"
