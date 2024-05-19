@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          colors: {
+            darkCyan: "hsl(158, 36%, 37%)",
+            cream: "hsl(30, 38%, 92%)",
+            veryDarkBlue: "hsl(212, 21%, 14%)",
+            darkGrayishBlue: "hsl(228, 12%, 48%)",
+            white: "hsl(0, 0%, 100%)",
+          },
+          fontFamily: {
+            Montserrat: ["Montserrat"],
+            Fraunces: ["Fraunces"],
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main h-screen bg-cream flex justify-center items-center">
+      <div
+        class="card box-border w-[343px] h-[611px] sm:w-[600px] sm:h-[450px] flex flex-col sm:flex-row rounded-[10px] bg-white"
+      >
+        <img
+          src="./images/image-product-desktop.jpg"
+          class="image-product-desktop hidden sm:block w-[300px] h-full rounded-l-[10px]"
+        />
+
+        <img
+          src="./images/image-product-mobile.jpg"
+          class="image-product-mobile block sm:hidden w-full h-[240px] rounded-t-[10px]"
+        />
+        <div class="context p-[24px] sm:p-[32px]">
+          <h4
+            class="category font-Montserrat font-medium text-[12px] text-darkGrayishBlue leading-[14.63px] tracking-[5px] mb-[12px] sm:mb-[19px]"
+          >
+            Perfume
+          </h4>
+          <h1
+            class="title font-Fraunces font-bold text-[32px] text-veryDarkBlue leading-[32px] mb-[16px] sm:mb-[24px]"
+          >
+            Gabrielle Essence Eau De Parfum
+          </h1>
+          <p
+            class="detail font-Montserrat font-medium text-[14px] text-darkGrayishBlue leading-[23px] mb-[24px] sm:mb-[30px]"
+          >
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div
+            class="price flex items-center gap-[19px] mb-[20px] sm:mb-[30px]"
+          >
+            <h2
+              class="current price font-Fraunces font-bold text-[32px] leading-[32px] text-darkCyan"
+            >
+              $149.99
+            </h2>
+            <h3
+              class="former price font-Montserrat font-medium text-[13px] leading-[23px] text-darkGrayishBlue underline underline-offset-[-5px]"
+            >
+              $169.99
+            </h3>
+          </div>
+          <button
+            class="button w-full h-[48px] flex justify-center items-center gap-[10.61px] bg-darkCyan rounded-[8px]"
+          >
+            <img
+              src="./images/icon-cart.svg"
+              class="icon-cart w-[14.39px] h-[16px]"
+            />
+            <p
+              class="button-context font-Montserrat font-bold text-[14px] text-white leading-[17.07px]"
+            >
+              Add to Cart
+            </p>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/jsupasil" target="_blank"
+        >Jirayu Supasil</a
+      >.
+    </div>
+  </body>
+</html>
