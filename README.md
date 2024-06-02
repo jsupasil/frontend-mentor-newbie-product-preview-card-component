@@ -23,8 +23,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/jsupasil/frontend-mentor-newbie-recipe-page)
-- Live Site URL: [Vercel](https://frontend-mentor-newbie-recipe-page.vercel.app/)
+- Solution URL: [GitHub](https://github.com/jsupasil/frontend-mentor-newbie-product-preview-card-component)
+- Live Site URL: [Vercel](https://frontend-mentor-newbie-product-preview-card-component.vercel.app/)
 
 ## My process
 
